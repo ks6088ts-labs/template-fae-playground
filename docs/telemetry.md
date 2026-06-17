@@ -25,7 +25,7 @@ The provider abstraction lives in `src/telemetry/`:
 2. Configure one or both providers in `.env.local`:
    - `VITE_APPLICATIONINSIGHTS_CONNECTION_STRING` — for Application Insights.
    - `VITE_OTEL_EXPORTER_OTLP_ENDPOINT` — for an OpenTelemetry Collector (example: `http://localhost:4318`).
-   - `VITE_OTEL_SERVICE_NAME` — optional, defaults to `template-typescript-react`.
+   - `VITE_OTEL_SERVICE_NAME` — optional, defaults to `template-fae-playground`.
 3. Run `pnpm dev` or `pnpm build`.
 
 ## Local OpenTelemetry visualization (Collector + Grafana LGTM)
@@ -40,7 +40,7 @@ The provider abstraction lives in `src/telemetry/`:
 
    ```bash
    VITE_OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4318
-   VITE_OTEL_SERVICE_NAME=template-typescript-react
+   VITE_OTEL_SERVICE_NAME=template-fae-playground
    ```
 
 3. Start the app (`pnpm dev`) and interact with the UI.
@@ -50,7 +50,7 @@ The default collector config allows CORS from `http://localhost:5173` so browser
 
 ## Pre-provisioned Grafana dashboard
 
-A ready-to-use dashboard, **Frontend Telemetry (template-typescript-react)**, is automatically imported into Grafana on startup (it is also set as the Grafana home dashboard). It visualizes the app's spans using Tempo span metrics and the raw traces:
+A ready-to-use dashboard, **Frontend Telemetry (template-fae-playground)**, is automatically imported into Grafana on startup (it is also set as the Grafana home dashboard). It visualizes the app's spans using Tempo span metrics and the raw traces:
 
 - Span rate, error rate, p95 latency, and total span count.
 - Span rate by name (`counter_button_clicked`, `document_load`, `page_view`, ...).

@@ -12,7 +12,7 @@
       }
     ]
   },
-  "description": "Frontend telemetry (spans, errors, latency) emitted by the template-typescript-react app via OTLP. Built on Tempo span metrics (RED) and Tempo traces.",
+  "description": "Frontend telemetry (spans, errors, latency) emitted by the template-fae-playground app via OTLP. Built on Tempo span metrics (RED) and Tempo traces.",
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
@@ -484,7 +484,7 @@
   ],
   "refresh": "30s",
   "schemaVersion": 39,
-  "tags": ["frontend", "opentelemetry", "template-typescript-react"],
+  "tags": ["frontend", "opentelemetry", "template-fae-playground"],
   "templating": {
     "list": [
       {
@@ -512,7 +512,7 @@
   "time": { "from": "now-30m", "to": "now" },
   "timepicker": {},
   "timezone": "",
-  "title": "Frontend Telemetry (template-typescript-react)",
+  "title": "Frontend Telemetry (template-fae-playground)",
   "uid": "frontend-telemetry",
   "version": 1,
   "weekStart": ""

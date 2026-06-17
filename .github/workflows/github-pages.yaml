@@ -43,7 +43,7 @@ jobs:
         env:
           # GitHub Pages serves this project from a sub-path, so override the
           # default relative base with the project site path.
-          VITE_BASE: /template-typescript-react/
+          VITE_BASE: /template-fae-playground/
 
       - name: Setup Pages
         uses: actions/configure-pages@v6

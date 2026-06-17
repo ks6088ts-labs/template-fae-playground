@@ -6,7 +6,7 @@ on:
 permissions:
   contents: read
 env:
-  IMAGE_NAME: template-typescript-react
+  IMAGE_NAME: template-fae-playground
 jobs:
   release:
     runs-on: "ubuntu-latest"

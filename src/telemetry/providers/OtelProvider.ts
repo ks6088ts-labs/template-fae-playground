@@ -29,7 +29,7 @@ type OtelTelemetryProviderOptions = {
   serviceName: string
 }
 
-const DEFAULT_SERVICE_NAME = 'template-typescript-react'
+const DEFAULT_SERVICE_NAME = 'template-fae-playground'
 
 export class OtelTelemetryProvider implements TelemetryService {
   private readonly endpoint: string

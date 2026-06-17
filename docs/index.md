@@ -1,6 +1,6 @@
 # Documentation
 
-Detailed documentation for the `template-typescript-react` template. Start with the [README](../README.md) for a quick overview, then dive into the topics below.
+Detailed documentation for the `template-fae-playground` template. Start with the [README](../README.md) for a quick overview, then dive into the topics below.
 
 ## Contents
 
@@ -15,7 +15,7 @@ This project was originally scaffolded with Vite's React + TypeScript template:
 
 ```shell
 # Create a new Vite project with the React TypeScript template
-pnpm create vite template-typescript-react --template react-ts
+pnpm create vite template-fae-playground --template react-ts
 ```
 
 ## References

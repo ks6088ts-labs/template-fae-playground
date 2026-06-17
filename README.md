@@ -21,7 +21,7 @@
 
 A starter template for building React single-page apps with TypeScript and Vite — including Biome-based linting/formatting, a two-tier E2E test setup, optional frontend telemetry, and CI/CD to GitHub Pages.
 
-**Live demo:** <https://ks6088ts.github.io/template-typescript-react/>
+**Live demo:** <https://ks6088ts.github.io/template-fae-playground/>
 
 ## Features
 

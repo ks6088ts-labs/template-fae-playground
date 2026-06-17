@@ -64,7 +64,7 @@ update: ## update dependencies
 # Docker
 # ---
 DOCKER_REPO_NAME ?= ks6088ts
-DOCKER_IMAGE_NAME ?= template-typescript-react
+DOCKER_IMAGE_NAME ?= template-fae-playground
 DOCKER_FILE ?= docker/Dockerfile
 TRIVY_VERSION ?= 0.69.3
 
