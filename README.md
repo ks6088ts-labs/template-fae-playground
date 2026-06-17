@@ -30,6 +30,7 @@ A starter template for building React single-page apps with TypeScript and Vite 
 - 🧹 **Biome** for linting and formatting (plus `actionlint` for workflows)
 - 🧪 **Vitest** (browser mode) + **Playwright** E2E suites
 - 📊 Optional **OpenTelemetry** / **Application Insights** frontend telemetry
+- 📱 Smartphone **sensor dashboard** (acceleration / gyro / orientation / heading) with CSV export
 - 🐳 Local **Grafana LGTM** observability stack via Docker Compose
 - 🚀 **GitHub Actions** CI/CD with **GitHub Pages** deployment
 
@@ -129,6 +130,15 @@ pnpm e2e
 ```
 
 Set `E2E_HEADED=true` to watch the browser UI. See [docs/e2e-testing.md](docs/e2e-testing.md) for details.
+
+## Sensor dashboard usage
+
+The top page provides a mobile-friendly sensor dashboard for demos:
+
+1. Open the app from an HTTPS URL (for example GitHub Pages).
+2. Tap `センサー開始` and grant browser permissions (required on iOS 13+).
+3. Move/tilt the device to see real-time charts and the 3D pose view.
+4. Tap `記録開始` / `記録停止` and use `CSV ダウンロード` to export captured data.
 
 ## Telemetry
 
