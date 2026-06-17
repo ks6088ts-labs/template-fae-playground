@@ -1,12 +1,12 @@
-[![test](https://github.com/ks6088ts/template-typescript-react/actions/workflows/test.yaml/badge.svg?branch=main)](https://github.com/ks6088ts/template-typescript-react/actions/workflows/test.yaml?query=branch%3Amain)
-[![e2e-test](https://github.com/ks6088ts/template-typescript-react/actions/workflows/e2e-test.yaml/badge.svg?branch=main)](https://github.com/ks6088ts/template-typescript-react/actions/workflows/e2e-test.yaml?query=branch%3Amain)
-[![docker](https://github.com/ks6088ts/template-typescript-react/actions/workflows/docker.yaml/badge.svg?branch=main)](https://github.com/ks6088ts/template-typescript-react/actions/workflows/docker.yaml?query=branch%3Amain)
-[![ghcr](https://github.com/ks6088ts/template-typescript-react/actions/workflows/ghcr-release.yaml/badge.svg)](https://github.com/ks6088ts/template-typescript-react/actions/workflows/ghcr-release.yaml)
-[![docker-release](https://github.com/ks6088ts/template-typescript-react/actions/workflows/docker-release.yaml/badge.svg)](https://github.com/ks6088ts/template-typescript-react/actions/workflows/docker-release.yaml)
-[![github-pages](https://github.com/ks6088ts/template-typescript-react/actions/workflows/github-pages.yaml/badge.svg?branch=main)](https://github.com/ks6088ts/template-typescript-react/actions/workflows/github-pages.yaml?query=branch%3Amain)
-[![release](https://github.com/ks6088ts/template-typescript-react/actions/workflows/release.yaml/badge.svg)](https://github.com/ks6088ts/template-typescript-react/actions/workflows/release.yaml)
-[![GitHub release](https://img.shields.io/github/v/release/ks6088ts/template-typescript-react?logo=github&label=release)](https://github.com/ks6088ts/template-typescript-react/releases/latest)
-[![Docker Hub](https://img.shields.io/docker/v/ks6088ts/template-typescript-react?logo=docker&label=Docker%20Hub&sort=semver)](https://hub.docker.com/r/ks6088ts/template-typescript-react)
+[![test](https://github.com/ks6088ts-labs/template-fae-playground/actions/workflows/test.yaml/badge.svg?branch=main)](https://github.com/ks6088ts-labs/template-fae-playground/actions/workflows/test.yaml?query=branch%3Amain)
+[![e2e-test](https://github.com/ks6088ts-labs/template-fae-playground/actions/workflows/e2e-test.yaml/badge.svg?branch=main)](https://github.com/ks6088ts-labs/template-fae-playground/actions/workflows/e2e-test.yaml?query=branch%3Amain)
+[![docker](https://github.com/ks6088ts-labs/template-fae-playground/actions/workflows/docker.yaml/badge.svg?branch=main)](https://github.com/ks6088ts-labs/template-fae-playground/actions/workflows/docker.yaml?query=branch%3Amain)
+[![ghcr](https://github.com/ks6088ts-labs/template-fae-playground/actions/workflows/ghcr-release.yaml/badge.svg)](https://github.com/ks6088ts-labs/template-fae-playground/actions/workflows/ghcr-release.yaml)
+[![docker-release](https://github.com/ks6088ts-labs/template-fae-playground/actions/workflows/docker-release.yaml/badge.svg)](https://github.com/ks6088ts-labs/template-fae-playground/actions/workflows/docker-release.yaml)
+[![github-pages](https://github.com/ks6088ts-labs/template-fae-playground/actions/workflows/github-pages.yaml/badge.svg?branch=main)](https://github.com/ks6088ts-labs/template-fae-playground/actions/workflows/github-pages.yaml?query=branch%3Amain)
+[![release](https://github.com/ks6088ts-labs/template-fae-playground/actions/workflows/release.yaml/badge.svg)](https://github.com/ks6088ts-labs/template-fae-playground/actions/workflows/release.yaml)
+[![GitHub release](https://img.shields.io/github/v/release/ks6088ts-labs/template-fae-playground?logo=github&label=release)](https://github.com/ks6088ts-labs/template-fae-playground/releases/latest)
+[![Docker Hub](https://img.shields.io/docker/v/ks6088ts-labs/template-fae-playground?logo=docker&label=Docker%20Hub&sort=semver)](https://hub.docker.com/r/ks6088ts-labs/template-fae-playground)
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
@@ -106,15 +106,15 @@ Pushing a `v*` tag keeps the existing release asset flow and also publishes mult
 
 | Registry | Image | Workflow |
 | --- | --- | --- |
-| GitHub Container Registry | `ghcr.io/ks6088ts/template-typescript-react` | [ghcr-release.yaml](.github/workflows/ghcr-release.yaml) |
-| Docker Hub | `ks6088ts/template-typescript-react` | [docker-release.yaml](.github/workflows/docker-release.yaml) |
+| GitHub Container Registry | `ghcr.io/ks6088ts-labs/template-fae-playground` | [ghcr-release.yaml](.github/workflows/ghcr-release.yaml) |
+| Docker Hub | `ks6088ts-labs/template-fae-playground` | [docker-release.yaml](.github/workflows/docker-release.yaml) |
 
 ```bash
 # Pull and run from GitHub Container Registry
-docker run --rm -p 8080:80 ghcr.io/ks6088ts/template-typescript-react:latest
+docker run --rm -p 8080:80 ghcr.io/ks6088ts-labs/template-fae-playground:latest
 
 # Pull and run from Docker Hub
-docker run --rm -p 8080:80 ks6088ts/template-typescript-react:latest
+docker run --rm -p 8080:80 ks6088ts-labs/template-fae-playground:latest
 ```
 
 The Docker Hub workflow requires two repository secrets: `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN` (a Docker Hub access token).
