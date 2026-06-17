@@ -34,7 +34,7 @@ describe('App bootstrap', () => {
     })
   })
 
-  it('renders the app and initializes telemetry context', async () => {
+  it('renders dashboard and tracks start action', async () => {
     await import('../../main.tsx')
 
     await vi.waitFor(() => {
@@ -43,15 +43,21 @@ describe('App bootstrap', () => {
     })
 
     await expect
-      .element(page.getByRole('heading', { name: 'Get started' }))
+      .element(
+        page.getByRole('heading', { name: 'スマホセンサーダッシュボード' }),
+      )
       .toBeInTheDocument()
 
-    await page.getByRole('button', { name: 'Count is 0' }).click()
+    await expect
+      .element(page.getByRole('button', { name: 'CSV ダウンロード' }))
+      .toBeDisabled()
+
+    await page.getByRole('button', { name: 'センサー開始' }).click()
 
     expect(telemetryMocks.telemetry.trackEvent).toHaveBeenCalledWith(
-      'counter_button_clicked',
+      'sensor_session_started',
       { component: 'App' },
-      { nextCount: 1 },
+      undefined,
     )
   })
 })
