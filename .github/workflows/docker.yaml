@@ -1,0 +1,28 @@
+name: docker
+
+on:
+  push:
+    branches:
+      - "main"
+      - "feature/**"
+  pull_request:
+    branches:
+      - "main"
+
+permissions:
+  contents: read
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0 # to retrieve git tags
+      - name: Add to PATH
+        shell: bash
+        run: echo "/home/runner/bin" >> "$GITHUB_PATH"
+      - name: Run CI tests for Docker
+        shell: bash
+        run: make ci-test-docker TOOLS_DIR="/home/runner/bin"

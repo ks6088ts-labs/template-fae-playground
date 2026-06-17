@@ -1,0 +1,64 @@
+name: Release assets
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+# Allow the workflow to create a release and upload assets to it.
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0 # to retrieve git tags
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          version: 10.33.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24.10.0
+          cache: pnpm
+
+      - name: Install dependencies
+        run: make install-deps-dev
+
+      - name: Build
+        # Uses the portable default base ('./') so the assets can be served from
+        # any path (static server, FastAPI, CDN sub-directory, etc.).
+        run: make build
+
+      - name: Package built assets
+        run: |
+          version="${GITHUB_REF_NAME}"
+          tar -czf "dist-${version}.tar.gz" -C dist .
+          (cd dist && zip -r "../dist-${version}.zip" .)
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: dist-${{ github.ref_name }}
+          path: dist
+          if-no-files-found: error
+
+      - name: Create GitHub Release
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="${GITHUB_REF_NAME}"
+          gh release create "${version}" \
+            --title "${version}" \
+            --generate-notes \
+            "dist-${version}.tar.gz" \
+            "dist-${version}.zip"
